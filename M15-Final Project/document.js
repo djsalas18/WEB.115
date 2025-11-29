@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 taskDiv.style.opacity = '0.5';
             }
 
-            // task html structure (including the checjbox and delete button)
+            // task html structure (including the checkbox and delete button)
             taskDiv.innerHTML = `
                 <span class="task-name">${task.name}</span>
                 <span class="task-meta">(Priority: ${task.priority} | ${task.date})</span>
@@ -50,16 +50,16 @@ document.addEventListener('DOMContentLoaded', () => {
    // Handles "Done" checkbox changes to mark tasks as completed
     taskManagerDiv.addEventListener('change', function(event) {
         if (event.target.classList.contains('toggle-complete')) {
-            const id = Number(event.target.dataset.id);
-            const task = tasks.find(task => task.id === id);
-            if (task) {
-                task.isCompleted = event.target.checked;
-                renderTasks();
+                const id = Number(event.target.dataset.id);
+                const task = tasks.find(task => task.id === id);
+                if (task) {
+                    task.isCompleted = event.target.checked;
+                    renderTasks();
             }
         }
     });
 
-    // Handles deletion when Delete button is clicked
+    // Handles deletion when the delete button is clicked
     taskManagerDiv.addEventListener('click', function(event) {
         if (event.target.classList.contains('delete-btn')) {
             const id = Number(event.target.dataset.id);
