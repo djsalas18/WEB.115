@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>interactive Task manager</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <h3><b>Task manager</b></h3>
+
+        <form id="taskForm">
+            <input type="text" id="task" placeholder="Task Name" required  oninvalid="this.setCustomValidity('Please add a name to task')"
+                                                                           oninput="this.setCustomValidity('')">
+            <select id="priority">
+                <option value="High" selected>High</option>
+                <option value="Medium" >Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="important"> Important
+            </label>
+
+            <button type="submit" id="addBtn">Add Task</button>
+        </form>
+
+        <div id="taskmanager"></div>
+
+        <script src="document.js"></script>
+    </body>
+</html>
