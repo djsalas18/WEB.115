@@ -96,12 +96,13 @@ h3 {
 }
 
 
-.priority-high    { background-color: #ee8998; }
+.priority-high    { background-color: #ffffff; }
 .priority-medium  { background-color: #ffffff; }
 .priority-low     { background-color: #ffffff; }
 
 
 .important {
+    background-color: red;
     border-left: #ffffff !important;
     font-weight: bold;
 }
@@ -118,7 +119,7 @@ h3 {
 
 .task-meta {
     font-size: 13px;
-    color: #7f8c8d;
+    color: #000000;
     margin-left: auto;
     margin-right: 15px;
 }
